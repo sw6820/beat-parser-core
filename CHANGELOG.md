@@ -5,7 +5,7 @@ All notable changes to the @beat-parser/core project will be documented in this 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.0.4] - 2025-01-13
+## [1.0.4] - 2025-08-13
 
 ### Added
 - **GitHub Packages Support**: Package now available as `@sw6820/beat-parser-core` on GitHub Packages
@@ -15,12 +15,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - **Workflow**: Fixed GitHub Actions workflow by removing build step
 
-## [1.0.3] - 2025-01-13
+## [1.0.3] - 2025-08-13
 
 ### Added
 - **GitHub Packages Configuration**: Initial setup for GitHub Packages publishing
 
-## [1.0.2] - 2025-01-13
+## [1.0.2] - 2025-08-13
 
 ### Added
 - **GitHub Release**: Professional release with comprehensive release notes
@@ -29,7 +29,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed  
 - **Version**: Updated for npm publication after GitHub repository creation
 
-## [1.0.1] - 2025-01-13
+## [1.0.1] - 2025-08-13
 
 ### Changed
 - **Documentation**: Streamlined documentation for npm deployment (52 files → 5 core docs)
@@ -40,7 +40,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Build**: Bypassed TypeScript build issues for deployment using stable compiled files
 - **Dependencies**: Reduced to core runtime dependencies only (audio-decode + fft.js)
 
-## [1.0.0] - 2025-01-11
+## [1.0.0] - 2025-08-11
 
 ### Added
 
