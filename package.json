@@ -1,6 +1,6 @@
 {
   "name": "beat-parser-core",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "TypeScript library for parsing musical beats and rhythmic patterns",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
