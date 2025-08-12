@@ -1,6 +1,6 @@
 {
   "name": "@sw6820/beat-parser-core",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "TypeScript library for parsing musical beats and rhythmic patterns",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
