@@ -1,0 +1,132 @@
+name: Feature Request
+description: Suggest a new feature or enhancement
+title: '[Feature]: '
+labels: ['enhancement', 'triage']
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for your interest in improving @beat-parser/core! Please provide detailed information about your feature request.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Feature Summary
+      description: A brief summary of the feature you'd like to see added
+      placeholder: Describe the feature in one or two sentences...
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem/Use Case
+      description: What problem does this feature solve? What use case does it address?
+      placeholder: |
+        I'm working on a music analysis application and I need...
+        Currently, I have to work around this limitation by...
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: Describe the solution you'd like to see implemented
+      placeholder: |
+        I would like to see a new method/class/feature that...
+        This could work by...
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternative Solutions
+      description: Have you considered any alternative solutions or workarounds?
+      placeholder: |
+        I've considered using...
+        Another approach could be...
+    validations:
+      required: false
+
+  - type: textarea
+    id: api-design
+    attributes:
+      label: API Design (Optional)
+      description: If you have ideas about how the API should look, please share them
+      render: typescript
+      placeholder: |
+        // Example API design
+        interface NewFeature {
+          analyze(audioData: Float32Array): AnalysisResult;
+        }
+        
+        const parser = new BeatParser({
+          newFeature: {
+            enabled: true,
+            sensitivity: 0.8
+          }
+        });
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How important is this feature to your use case?
+      options:
+        - Low (nice to have)
+        - Medium (would be helpful)
+        - High (needed for my project)
+        - Critical (blocking my work)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: complexity
+    attributes:
+      label: Estimated Complexity
+      description: How complex do you think this feature would be to implement?
+      options:
+        - Simple (small change or addition)
+        - Medium (moderate implementation effort)
+        - Complex (significant changes required)
+        - Not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: Additional Context
+      description: |
+        Add any other context, screenshots, links to research, or examples that would help us understand your request better.
+      placeholder: |
+        Links to relevant documentation, papers, or examples...
+        Screenshots or mockups...
+        Related projects or libraries...
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: Contribution
+      description: Would you be interested in contributing to this feature?
+      options:
+        - label: I'd be willing to help implement this feature
+        - label: I'd be willing to help test this feature
+        - label: I'd be willing to help document this feature
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our Code of Conduct
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true

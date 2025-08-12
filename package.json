@@ -1,0 +1,93 @@
+{
+  "name": "beat-parser-core",
+  "version": "1.0.1",
+  "description": "TypeScript library for parsing musical beats and rhythmic patterns",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "docs",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "build:watch": "rollup -c -w",
+    "dev": "rollup -c -w",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:quick": "node tests/utils/quick-test.js",
+    "test:demo": "node tests/demos/audio-decode-demo.js",
+    "test:music": "node tests/integration/music-analysis.js",
+    "test:integration": "node tests/integration/beat-parser-integration.js ./music/summer-vibes-158665.mp3",
+    "test:all": "node tests/utils/test-runner.js",
+    "test:genre-edge-cases": "jest --testPathPattern=music-genre-edge-cases.test.ts",
+    "test:genre-all": "jest --testPathPattern='(genre-specific|ground-truth|music-genre).*\\.test\\.ts'",
+    "test:genre-runner": "npx ts-node src/__tests__/run-genre-tests.ts",
+    "test:picture-count": "npx ts-node src/__tests__/run-picture-count-tests.ts all",
+    "test:picture-count-core": "npx ts-node src/__tests__/run-picture-count-tests.ts core",
+    "test:picture-count-performance": "npx ts-node src/__tests__/run-picture-count-tests.ts performance",
+    "test:picture-count-quality": "npx ts-node src/__tests__/run-picture-count-tests.ts quality",
+    "test:picture-count-synthetic": "npx ts-node src/__tests__/run-picture-count-tests.ts synthetic",
+    "test:picture-count-smoke": "npx ts-node src/__tests__/run-picture-count-tests.ts smoke",
+    "test:picture-count-individual": "jest --testPathPattern='picture-count.*\\.test\\.ts'",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix",
+    "format": "prettier --write src/**/*.ts",
+    "format:check": "prettier --check src/**/*.ts",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "echo 'Using existing build files'",
+    "prepack": "echo 'Using existing build files'"
+  },
+  "keywords": [
+    "beat",
+    "parser",
+    "music",
+    "rhythm",
+    "audio",
+    "typescript",
+    "library"
+  ],
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sw6820/beat_parser.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sw6820/beat_parser/issues"
+  },
+  "homepage": "https://github.com/sw6820/beat_parser#readme",
+  "dependencies": {
+    "audio-decode": "^2.2.3",
+    "fft.js": "^4.0.4"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.0",
+    "@rollup/plugin-terser": "^0.4.0",
+    "@rollup/plugin-typescript": "^11.0.0",
+    "@types/jest": "^29.5.0",
+    "@types/node": "^20.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.39.0",
+    "@typescript-eslint/parser": "^8.39.0",
+    "eslint": "^8.0.0",
+    "eslint-config-prettier": "^9.1.2",
+    "eslint-plugin-prettier": "^5.0.0",
+    "jest": "^29.5.0",
+    "prettier": "^3.0.0",
+    "rollup": "^4.0.0",
+    "rollup-plugin-dts": "^6.0.0",
+    "ts-jest": "^29.1.0",
+    "tslib": "^2.6.0",
+    "typescript": "^5.2.0"
+  }
+}

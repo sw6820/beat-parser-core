@@ -1,0 +1,101 @@
+name: Question
+description: Ask a question about usage, documentation, or implementation
+title: '[Question]: '
+labels: ['question', 'documentation']
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Have a question about @beat-parser/core? We're here to help!
+        
+        Before asking, please check:
+        - [README.md](https://github.com/username/beat-parser/blob/main/README.md)
+        - [API Documentation](https://github.com/username/beat-parser/blob/main/API.md)
+        - [Existing Issues](https://github.com/username/beat-parser/issues)
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+      description: What would you like to know?
+      placeholder: |
+        I'm trying to understand how to...
+        I'm having trouble with...
+        Can you explain how...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: What category does your question fall into?
+      options:
+        - General usage
+        - API documentation
+        - Performance optimization
+        - Integration with other libraries
+        - Audio processing concepts
+        - Troubleshooting
+        - Best practices
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Provide some context about what you're trying to achieve
+      placeholder: |
+        I'm building a music analysis application that needs to...
+        My use case involves...
+        I'm working with audio files that...
+    validations:
+      required: false
+
+  - type: textarea
+    id: code-sample
+    attributes:
+      label: Code Sample (Optional)
+      description: If relevant, provide a code sample showing what you've tried
+      render: typescript
+      placeholder: |
+        import { BeatParser } from '@beat-parser/core';
+        
+        const parser = new BeatParser();
+        // ... your code here
+    validations:
+      required: false
+
+  - type: input
+    id: version
+    attributes:
+      label: Package Version
+      description: What version of @beat-parser/core are you using?
+      placeholder: e.g., 1.0.0
+    validations:
+      required: false
+
+  - type: textarea
+    id: research
+    attributes:
+      label: What have you tried?
+      description: What documentation have you checked or solutions have you attempted?
+      placeholder: |
+        I've read the README and API docs...
+        I've tried searching for...
+        I've looked at the examples in...
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our Code of Conduct
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true

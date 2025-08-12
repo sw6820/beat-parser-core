@@ -1,0 +1,27 @@
+{
+  "timestamp": "2025-08-12T17:21:24.271Z",
+  "duration": "69996ms",
+  "summary": {
+    "total": 3,
+    "passed": 3,
+    "failed": 0,
+    "errors": 0
+  },
+  "results": [
+    {
+      "test": "Audio Decode Demo",
+      "status": "passed",
+      "error": null
+    },
+    {
+      "test": "Music Analysis",
+      "status": "passed",
+      "error": null
+    },
+    {
+      "test": "Beat Parser Integration",
+      "status": "passed",
+      "error": null
+    }
+  ]
+}
