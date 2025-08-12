@@ -60,12 +60,12 @@
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sw6820/beat_parser.git"
+    "url": "git+https://github.com/sw6820/beat-parser-core.git"
   },
   "bugs": {
-    "url": "https://github.com/sw6820/beat_parser/issues"
+    "url": "https://github.com/sw6820/beat-parser-core/issues"
   },
-  "homepage": "https://github.com/sw6820/beat_parser#readme",
+  "homepage": "https://github.com/sw6820/beat-parser-core#readme",
   "dependencies": {
     "audio-decode": "^2.2.3",
     "fft.js": "^4.0.4"
