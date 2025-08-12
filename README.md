@@ -1,8 +1,9 @@
-# @beat-parser/core
+# @sw6820/beat-parser-core
 
 A powerful, production-ready TypeScript library for parsing musical beats and rhythmic patterns from audio data. Built for both browser and Node.js environments with Web Worker support for heavy processing tasks.
 
-[![npm version](https://badge.fury.io/js/%40beat-parser%2Fcore.svg)](https://badge.fury.io/js/%40beat-parser%2Fcore)
+[![npm version](https://badge.fury.io/js/beat-parser-core.svg)](https://badge.fury.io/js/beat-parser-core)
+[![GitHub Package](https://img.shields.io/badge/GitHub-Package-blue.svg)](https://github.com/sw6820/beat-parser-core/packages)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.2+-blue.svg)](https://www.typescriptlang.org/)
 
@@ -38,16 +39,27 @@ A powerful, production-ready TypeScript library for parsing musical beats and rh
 
 ### Installation & Setup
 
-For complete installation instructions, environment setup, and configuration options, see **[Setup Guide](docs/core/SETUP.md)**.
+For complete installation instructions, environment setup, and configuration options, see **[Setup Guide](docs/SETUP.md)**.
 
+#### From npm (public registry)
 ```bash
-npm install @beat-parser/core
+npm install beat-parser-core
+```
+
+#### From GitHub Packages
+```bash
+# Configure npm to use GitHub Packages for @sw6820 scope
+echo "@sw6820:registry=https://npm.pkg.github.com" >> .npmrc
+
+# Install the package
+npm install @sw6820/beat-parser-core
 ```
 
 ### Basic Example
 
 ```typescript
-import { BeatParser } from '@beat-parser/core';
+import { BeatParser } from 'beat-parser-core';
+// or from GitHub Packages: import { BeatParser } from '@sw6820/beat-parser-core';
 
 // Create parser and process audio
 const parser = new BeatParser();
@@ -66,7 +78,7 @@ await parser.cleanup();
 ### Worker Processing
 
 ```typescript
-import { BeatParserWorkerClient } from '@beat-parser/core';
+import { BeatParserWorkerClient } from 'beat-parser-core';
 
 const workerClient = new BeatParserWorkerClient();
 const result = await workerClient.parseBuffer(audioData, {
